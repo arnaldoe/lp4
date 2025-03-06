@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resposta do Exercício 4</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Resultado: Desconto no Produto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Resultado da Divisão</h1>
+        <h1>Resultado: Desconto no Produto</h1>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-            $valor1 = isset($_POST["valor1"]) ? floatval($_POST["valor1"]) : 0;
-            $valor2 = isset($_POST["valor2"]) ? floatval($_POST["valor2"]) : 0;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") { // Obter o valor do produto do formulário
+            $valorProduto = isset($_POST['valorProduto']) ? floatval($_POST['valorProduto']) : 0;
 
-            if ($valor2 == 0) {
-                echo "<p>Erro: Não é possível dividir por zero.</p>";
+            if ($valorProduto > 100) { // Aplicar o desconto de 15% se o valor for maior que R$100,00
+                $desconto = $valorProduto * 0.15;
+                $novoValor = $valorProduto - $desconto;
+                echo "<p>Valor original: <strong>R$ " . number_format($valorProduto, 2, ',', '.') . "</strong></p>";
+                echo "<p>Desconto aplicado (15%): <strong>R$ " . number_format($desconto, 2, ',', '.') . "</strong></p>";
+                echo "<p><strong>Valor final: R$ " . number_format($novoValor, 2, ',', '.') . "</strong></p>";
             } else {
-                $divisao = $valor1 / $valor2;
-                echo "<p>A divisão de $valor1 por $valor2 é: <strong>$divisao</strong></p>";
+                echo "<p>O valor do produto é <strong>R$ " . number_format($valorProduto, 2, ',', '.') . "</strong> e não há desconto aplicado.</p>";
             }
         }
         ?>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

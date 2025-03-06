@@ -11,16 +11,14 @@
         <h1>Resultado: Ordem Crescente</h1>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obter os valores A e B do formulário
+            // Verif se valor foi declarado and dif de null & get float
             $valorA = isset($_POST['valorA']) ? floatval($_POST['valorA']) : 0;
             $valorB = isset($_POST['valorB']) ? floatval($_POST['valorB']) : 0;
-
-            // Verificar se os valores são iguais
-            if ($valorA == $valorB) {
+            
+            if ($valorA == $valorB) { // Verif se os valores são iguais
                 echo "<p>Números iguais: <strong>$valorA</strong></p>";
-            } else {
-                // Ordenar os valores em ordem crescente
-                $valores = [$valorA, $valorB];
+            } else {            
+                $valores = [$valorA, $valorB]; // Ordenar os valores em ordem crescente
                 sort($valores);
                 echo "<p>Valores em ordem crescente: <strong>{$valores[0]} {$valores[1]}</strong></p>";
             }

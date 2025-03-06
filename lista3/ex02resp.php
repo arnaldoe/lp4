@@ -11,23 +11,19 @@
         <h1>Resultado: Soma dos Valores</h1>
         <?php
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Obter os valores do formulário
+            // Verif se valor foi declaro and dif de null & get float
             $valor1 = isset($_POST['valor1']) ? floatval($_POST['valor1']) : 0;
             $valor2 = isset($_POST['valor2']) ? floatval($_POST['valor2']) : 0;
 
-            // Calcular a soma
             $soma = $valor1 + $valor2;
 
-            // Se os valores forem iguais, retornar o triplo da soma
-            if ($valor1 == $valor2) {
+            if ($valor1 == $valor2) { // Se os valores forem iguais, retornar o triplo da soma
                 $resultado = 3 * $soma;
+                echo "<p>Resultado final: <strong>$resultado</strong></p>";
             } else {
                 $resultado = $soma;
+                echo "<p>A soma dos valores é: <strong>$soma</strong></p>";
             }
-
-            // Exibir o resultado
-            echo "<p>A soma dos valores é: <strong>$soma</strong></p>";
-            echo "<p>Resultado final: <strong>$resultado</strong></p>";
         }
         ?>
     </div>

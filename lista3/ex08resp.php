@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resposta do Exercício 8</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Resultado: Contagem Regressiva com do-while</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Resultado do Cálculo da Área</h1>
+        <h1>Resultado: Contagem Regressiva com do-while</h1>
         <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-            $largura = isset($_POST["largura"]) ? floatval($_POST["largura"]) : 0;
-            $altura = isset($_POST["altura"]) ? floatval($_POST["altura"]) : 0;
+        if ($_SERVER["REQUEST_METHOD"] == "POST") { // Obtém o número informado
+            $numero = isset($_POST['numero']) ? intval($_POST['numero']) : 0;
 
-            // Calcular a área do retângulo
-            $area = $largura * $altura;
+            if ($numero < 1) {
+                echo "<p class='text-danger'>Por favor, insira um número válido maior que zero.</p>";
+            } else {
+                echo "<p>Contagem regressiva a partir de $numero:</p><h3>";
 
-            echo "<p>A área do retângulo é: <strong>$area</strong> unidades quadradas.</p>";
+                do {
+                    echo "$numero ";
+                    $numero--;
+                } while ($numero >= 1);
+
+                echo "</h3>";
+            }
         }
         ?>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
