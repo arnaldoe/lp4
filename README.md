@@ -26,6 +26,10 @@
  ┃ ┣ 📜 ex01.php
  ┃ ┣ 📜 ex01resp.php
  ┃ ┗ 📜 ... até ex07.php, ex07resp.php
+ ┣ 📂 lista5
+ ┃ ┣ 📜 ex01.php
+ ┃ ┣ 📜 ex02.php
+ ┃ ┗ 📜 ... até ex05.php
 ```
 
 ---
@@ -83,6 +87,16 @@
 | 05 | Leia um valor e mostre a raiz quadrada dele. | [ex05.php](lista4/ex05.php) | [ex05resp.php](lista4/ex05resp.php) |
 | 06 | Leia um número de ponto flutuante e mostre ele arredondado. | [ex06.php](lista4/ex06.php) | [ex06resp.php](lista4/ex06resp.php) |
 | 07 | Calcule a diferença de dias entre duas datas inseridas. | [ex07.php](lista4/ex07.php) | [ex07resp.php](lista4/ex07resp.php) |
+
+### 📝 Lista 5 - Exercícios PHP
+
+| Exercício | Enunciado | Resposta |
+|-----------|-----------|--------|
+| 01 | Contatos: Leia 5 nomes e números, armazene em um mapa ordenado, evite duplicatas e exiba a lista. | [ex01.php](lista5/ex01.php) |
+| 02 | Alunos: Leia 5 nomes e 3 notas, armazene em um mapa ordenado, calcule a média e exiba em ordem decrescente. | [ex02.php](lista5/ex02.php) |
+| 03 | Produtos: Leia 5 códigos, nomes e preços, aplique 10% de desconto em produtos acima de R$100,00 e exiba ordenado por nome. | [ex03.php](lista5/ex03.php) |
+| 04 | Itens: Leia 5 nomes e preços, aplique 15% de imposto e exiba ordenado pelo preço final. | [ex04.php](lista5/ex04.php) |
+| 05 | Livros: Leia 5 títulos e quantidades, exiba alerta para estoque menor que 5 e ordene por título. | [ex05.php](lista5/ex05.php) |
 
 ---
 

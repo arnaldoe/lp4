@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Exercício 2 - Notas dos Alunos</title>
+    <title>Exercício 2 - Notas dos Alunos e Notas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="container mt-5">
 
-    <h2 class="text-center mb-4">Cadastro de Alunos</h2>
+    <h2 class="text-center mb-4">Exercício 2: Cadastro de Alunos e Notas</h2>
     
     <form action="" method="POST" class="row g-3">
         <?php for ($i = 0; $i < 5; $i++): ?>
